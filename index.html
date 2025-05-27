@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Socials</title>
 
-  <!-- Updated to Font Awesome 6.5.1 for Bluesky support -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Updated to Font Awesome 6.5.2 for Bluesky support -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-++b8c7E5MLgyZf9AMOP8DnqWcZa+d+7cShh0GWaB0Y3y91FR4r2UbWvEUV2khctHTMxBktpaz97I8/k8uqxW8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     * {
@@ -60,17 +60,17 @@
 
     <!-- Instagram -->
     <div id="instagram" onclick="navigate(this.id)" class="social">
-      <span class="icon instagram"><i class="fab fa-instagram"></i></span>
+      <span class="icon instagram"><i class="fa-brands fa-instagram"></i></span>
     </div>
 
     <!-- LinkedIn -->
     <div id="linkedin" onclick="navigate(this.id)" class="social">
-      <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+      <span class="icon linkedin"><i class="fa-brands fa-linkedin"></i></span>
     </div>
 
     <!-- Bluesky -->
     <div id="bluesky" onclick="navigate(this.id)" class="social">
-      <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
+      <span class="icon bluesky"><i class="fa-brands fa-bluesky"></i></span>
     </div>
 
   </div>
@@ -100,7 +100,7 @@
       else if (id === "telegram")
         window.open("https://web.telegram.org/", '_blank').focus();
       else if (id === "bluesky")
-        window.open("https://bsky.app/profile/sean.bglr.at", '_blank').focus();
+        window.open("https://bsky.app/profile/sean.bglr.at", '_blank').focus(); // Replace with your actual Bluesky profile
     }
   </script>
 </body>
