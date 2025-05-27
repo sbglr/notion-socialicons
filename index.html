@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
 
 <html lang="en">
 
@@ -19,20 +19,71 @@
     }
 
     body {
+      display: grid;
       font-family: "Poppins", sans-serif;
+      place-items: center;
     }
 
     .wrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
+      padding-top: 10px;
       display: inline-flex;
-      margin: 10px;
+
     }
 
     .icon {
+      /* Change the icon size here */
       font-size: 1.5em;
-      color: #7a7a7a;
+      /* Change the icons colours here*/
+      color: #7a7a7a
+    }
+
+
+    .blog:hover {
+      color: #ffbd2f;
+    }
+
+    .email:hover {
+      color: #23c8c8;
+    }
+
+    .facebook:hover {
+      color: #4267B2;
+    }
+
+    .instagram:hover {
+      color: rgb(241, 102, 217);
+    }
+
+    .linkedin:hover {
+      color: #0e76a8;
+    }
+
+    .twitter:hover {
+      color: #26a7de;
+    }
+
+    .reddit:hover {
+      color: #ff4500;
+    }
+
+    .tiktok:hover {
+      color: #ff0050;
+    }
+
+    .youtube:hover {
+      color: #FF0000;
+    }
+
+    .pinterest:hover {
+      color: #c8232c;
+    }
+
+    .telegram:hover {
+      color: #2AABEE;
+    }
+
+    .bluesky:hover {
+      color: #00A8E8;
     }
 
     .social {
@@ -40,55 +91,56 @@
       margin: 10px;
       cursor: pointer;
     }
-
-    .blog:hover { color: #ffbd2f; }
-    .email:hover { color: #23c8c8; }
-    .facebook:hover { color: #4267B2; }
-    .instagram:hover { color: rgb(241, 102, 217); }
-    .linkedin:hover { color: #0e76a8; }
-    .twitter:hover { color: #26a7de; }
-    .reddit:hover { color: #ff4500; }
-    .tiktok:hover { color: #ff0050; }
-    .youtube:hover { color: #FF0000; }
-    .pinterest:hover { color: #c8232c; }
-    .telegram:hover { color: #2AABEE; }
-    .bluesky:hover { color: #00A8E8; }
   </style>
+
 </head>
 
 <body>
 
-  <div class="wrapper">
-    <!-- Start bluesky Icon -->
-    <div id="bluesky" onclick="navigate(this.id)" class="social">
-      <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
+  <body>
+
+    <div class="wrapper">
+
+      <!-- Start bluesky Icon -->
+      <div id="bluesky" onclick="navigate(this.id)" class="social">
+        <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
+      </div>
+      <!-- End bluesky Icon -->
+      
+      <!-- Start linkedin Icon -->
+      <div id="linkedin" onclick="navigate(this.id)" class="social">
+        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+      </div>
+      <!-- End linkedin Icon -->
+
     </div>
-    <!-- End bluesky Icon -->
 
-    <!-- Start linkedin Icon -->
-    <div id="linkedin" onclick="navigate(this.id)" class="social">
-      <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-    </div>
-    <!-- End linkedin Icon -->
-  </div>
 
-  <script>
-    function navigate(id) {
-      let newWindow;
 
-      if (id === "linkedin") {
-        newWindow = window.open("https://www.linkedin.com/in/sbglr", '_blank');
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+        let newWindow;
+
+        if (id === "linkedin") {
+          newWindow = window.open("https://www.linkedin.com/in/sbglr", '_blank'); //Add the url to your linkedin account
+        }
+        else if (id === "bluesky") {
+          newWindow = window.open("https://bsky.app/profile/sean.bglr.at/", '_blank'); //Add the url to your bluesky account
+        }
+
+        // Only call focus if the window opened successfully
+        if (newWindow) {
+          newWindow.focus();
+        }
       }
-      else if (id === "bluesky") {
-        newWindow = window.open("https://bsky.app/profile/sean.bglr.at/", '_blank');
-      }
 
-      if (newWindow) {
-        newWindow.focus();
-      }
-    }
-  </script>
+    </script>
 
-</body>
+
+
+  </body>
 
 </html>
