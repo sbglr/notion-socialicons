@@ -19,66 +19,20 @@
     }
 
     body {
-      display: grid;
       font-family: "Poppins", sans-serif;
-      place-items: center;
     }
 
     .wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
       display: inline-flex;
+      margin: 10px;
     }
 
     .icon {
-      font-size: 1em;
+      font-size: 1.5em;
       color: #7a7a7a;
-    }
-
-    .blog:hover {
-      color: #ffbd2f;
-    }
-
-    .email:hover {
-      color: #23c8c8;
-    }
-
-    .facebook:hover {
-      color: #4267B2;
-    }
-
-    .instagram:hover {
-      color: rgb(241, 102, 217);
-    }
-
-    .linkedin:hover {
-      color: #0e76a8;
-    }
-
-    .twitter:hover {
-      color: #26a7de;
-    }
-
-    .reddit:hover {
-      color: #ff4500;
-    }
-
-    .tiktok:hover {
-      color: #ff0050;
-    }
-
-    .youtube:hover {
-      color: #FF0000;
-    }
-
-    .pinterest:hover {
-      color: #c8232c;
-    }
-
-    .telegram:hover {
-      color: #2AABEE;
-    }
-
-    .bluesky:hover {
-      color: #00A8E8;
     }
 
     .social {
@@ -86,14 +40,25 @@
       margin: 10px;
       cursor: pointer;
     }
-  </style>
 
+    .blog:hover { color: #ffbd2f; }
+    .email:hover { color: #23c8c8; }
+    .facebook:hover { color: #4267B2; }
+    .instagram:hover { color: rgb(241, 102, 217); }
+    .linkedin:hover { color: #0e76a8; }
+    .twitter:hover { color: #26a7de; }
+    .reddit:hover { color: #ff4500; }
+    .tiktok:hover { color: #ff0050; }
+    .youtube:hover { color: #FF0000; }
+    .pinterest:hover { color: #c8232c; }
+    .telegram:hover { color: #2AABEE; }
+    .bluesky:hover { color: #00A8E8; }
+  </style>
 </head>
 
 <body>
 
   <div class="wrapper">
-
     <!-- Start bluesky Icon -->
     <div id="bluesky" onclick="navigate(this.id)" class="social">
       <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
@@ -105,7 +70,6 @@
       <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
     </div>
     <!-- End linkedin Icon -->
-
   </div>
 
   <script>
@@ -114,7 +78,8 @@
 
       if (id === "linkedin") {
         newWindow = window.open("https://www.linkedin.com/in/sbglr", '_blank');
-      } else if (id === "bluesky") {
+      }
+      else if (id === "bluesky") {
         newWindow = window.open("https://bsky.app/profile/sean.bglr.at/", '_blank');
       }
 
