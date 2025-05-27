@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-
-<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
 
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Socials</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- Updated to Font Awesome 6.5.1 for Bluesky support -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     * {
@@ -27,60 +27,25 @@
     .wrapper {
       padding-top: 10px;
       display: inline-flex;
-
     }
 
     .icon {
-      /* Change the icon size here */
       font-size: 2em;
-      /* Change the icons colours here*/
-      color: #7a7a7a
+      color: #7a7a7a;
     }
 
-
-    .blog:hover {
-      color: #ffbd2f;
-    }
-
-    .email:hover {
-      color: #23c8c8;
-    }
-
-    .facebook:hover {
-      color: #4267B2;
-    }
-
-    .instagram:hover {
-      color: rgb(241, 102, 217);
-    }
-
-    .linkedin:hover {
-      color: #0e76a8;
-    }
-
-    .twitter:hover {
-      color: #26a7de;
-    }
-
-    .reddit:hover {
-      color: #ff4500;
-    }
-
-    .tiktok:hover {
-      color: #ff0050;
-    }
-
-    .youtube:hover {
-      color: #FF0000;
-    }
-
-    .pinterest:hover {
-      color: #c8232c;
-    }
-
-    .telegram:hover {
-      color: #2AABEE;
-    }
+    .blog:hover       { color: #ffbd2f; }
+    .email:hover      { color: #23c8c8; }
+    .facebook:hover   { color: #4267B2; }
+    .instagram:hover  { color: rgb(241, 102, 217); }
+    .linkedin:hover   { color: #0e76a8; }
+    .twitter:hover    { color: #26a7de; }
+    .reddit:hover     { color: #ff4500; }
+    .tiktok:hover     { color: #ff0050; }
+    .youtube:hover    { color: #FF0000; }
+    .pinterest:hover  { color: #c8232c; }
+    .telegram:hover   { color: #2AABEE; }
+    .bluesky:hover    { color: #1187D2; }
 
     .social {
       position: relative;
@@ -88,77 +53,55 @@
       cursor: pointer;
     }
   </style>
-
 </head>
 
 <body>
+  <div class="wrapper">
 
-  <body>
-
-    <div class="wrapper">
-
-      <!-- Start instagram Icon -->
-      <div id="instagram" onclick="navigate(this.id)" class="social">
-        <span class="icon instagram"><i class="fab fa-instagram"></i></span>
-      </div>
-      <!-- End instagram Icon -->
-
-      <!-- Start linkedin Icon -->
-      <div id="linkedin" onclick="navigate(this.id)" class="social">
-        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-      </div>
-      <!-- End linkedin Icon -->
-
+    <!-- Instagram -->
+    <div id="instagram" onclick="navigate(this.id)" class="social">
+      <span class="icon instagram"><i class="fab fa-instagram"></i></span>
     </div>
 
+    <!-- LinkedIn -->
+    <div id="linkedin" onclick="navigate(this.id)" class="social">
+      <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+    </div>
 
+    <!-- Bluesky -->
+    <div id="bluesky" onclick="navigate(this.id)" class="social">
+      <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
+    </div>
 
+  </div>
 
-    <script>
-      function navigate(id) {
-
-        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
-
-        if (id === "blog")
-          window.open("https://blog.shorouk.dev", '_blank').focus(); //Add the url to your blog
-
-        else if (id === "email") {
-          window.open("mailto:someone@yoursite.com", '_blank').focus(); //Add your email after "mailto:""
-        }
-
-        else if (id === "facebook") {
-          window.open("https://facebook.com/", '_blank').focus(); //Add the url to your facebook page or account
-        }
-        else if (id === "instagram") {
-          window.open("instagram.com/sbglr", '_blank').focus(); //Add the url to your instagram account
-        }
-        else if (id === "linkedin") {
-          window.open("https://www.linkedin.com/in/sbglr", '_blank').focus(); //Add the url to your pinterest account
-        }
-        else if (id === "twitter") {
-          window.open("https://twitter.com/", '_blank').focus(); //Add the url to your pinterest account
-        }
-        else if (id === "reddit") {
-          window.open("https://www.reddit.com/", '_blank').focus(); //Add the url to your reddit account
-        }
-        else if (id === "tiktok") {
-          window.open("https://www.tiktok.com/", '_blank').focus(); //Add the url to your tiktok account
-        }
-        else if (id === "youtube") {
-          window.open("https://www.youtube.com/", '_blank').focus(); //Add the url to your youtube account
-        }
-        else if (id === "pinterest") {
-          window.open("https://www.pinterest.com/", '_blank').focus(); //Add the url to your pinterest account
-        }
-        else if (id === "telegram") {
-          window.open("https://web.telegram.org/", '_blank').focus(); //Add the url to your telegram account
-        }
-      }
-
-    </script>
-
-
-
-  </body>
-
+  <script>
+    function navigate(id) {
+      if (id === "blog")
+        window.open("https://blog.shorouk.dev", '_blank').focus();
+      else if (id === "email")
+        window.open("mailto:someone@yoursite.com", '_blank').focus();
+      else if (id === "facebook")
+        window.open("https://facebook.com/", '_blank').focus();
+      else if (id === "instagram")
+        window.open("https://instagram.com/sbglr", '_blank').focus();
+      else if (id === "linkedin")
+        window.open("https://www.linkedin.com/in/sbglr", '_blank').focus();
+      else if (id === "twitter")
+        window.open("https://twitter.com/", '_blank').focus();
+      else if (id === "reddit")
+        window.open("https://www.reddit.com/", '_blank').focus();
+      else if (id === "tiktok")
+        window.open("https://www.tiktok.com/", '_blank').focus();
+      else if (id === "youtube")
+        window.open("https://www.youtube.com/", '_blank').focus();
+      else if (id === "pinterest")
+        window.open("https://www.pinterest.com/", '_blank').focus();
+      else if (id === "telegram")
+        window.open("https://web.telegram.org/", '_blank').focus();
+      else if (id === "bluesky")
+        window.open("https://bsky.app/profile/sean.bglr.at", '_blank').focus();
+    }
+  </script>
+</body>
 </html>
