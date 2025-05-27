@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
 
 <html lang="en">
 
@@ -19,24 +19,22 @@
     }
 
     body {
-      display: grid;
       font-family: "Poppins", sans-serif;
-      place-items: center;
     }
 
     .wrapper {
-      padding-top: 10px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
       display: inline-flex;
-
+      gap: 10px;
+      z-index: 1000;
     }
 
     .icon {
-      /* Change the icon size here */
       font-size: 1em;
-      /* Change the icons colours here*/
-      color: #7a7a7a
+      color: #7a7a7a;
     }
-
 
     .blog:hover {
       color: #ffbd2f;
@@ -87,60 +85,43 @@
     }
 
     .social {
-      position: relative;
-      margin: 10px;
       cursor: pointer;
     }
   </style>
-
 </head>
 
 <body>
 
-  <body>
-
-    <div class="wrapper">
-
-      <!-- Start bluesky Icon -->
-      <div id="bluesky" onclick="navigate(this.id)" class="social">
-        <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
-      </div>
-      <!-- End bluesky Icon -->
-      
-      <!-- Start linkedin Icon -->
-      <div id="linkedin" onclick="navigate(this.id)" class="social">
-        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-      </div>
-      <!-- End linkedin Icon -->
-
+  <div class="wrapper">
+    <!-- Start bluesky Icon -->
+    <div id="bluesky" onclick="navigate(this.id)" class="social">
+      <span class="icon bluesky"><i class="fab fa-bluesky"></i></span>
     </div>
+    <!-- End bluesky Icon -->
 
+    <!-- Start linkedin Icon -->
+    <div id="linkedin" onclick="navigate(this.id)" class="social">
+      <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+    </div>
+    <!-- End linkedin Icon -->
+  </div>
 
+  <script>
+    function navigate(id) {
+      let newWindow;
 
-
-    <script>
-      function navigate(id) {
-
-        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
-        let newWindow;
-
-        if (id === "linkedin") {
-          newWindow = window.open("https://www.linkedin.com/in/sbglr", '_blank'); //Add the url to your linkedin account
-        }
-        else if (id === "bluesky") {
-          newWindow = window.open("https://bsky.app/profile/sean.bglr.at/", '_blank'); //Add the url to your bluesky account
-        }
-
-        // Only call focus if the window opened successfully
-        if (newWindow) {
-          newWindow.focus();
-        }
+      if (id === "linkedin") {
+        newWindow = window.open("https://www.linkedin.com/in/sbglr", '_blank');
+      } else if (id === "bluesky") {
+        newWindow = window.open("https://bsky.app/profile/sean.bglr.at/", '_blank');
       }
 
-    </script>
+      if (newWindow) {
+        newWindow.focus();
+      }
+    }
+  </script>
 
-
-
-  </body>
+</body>
 
 </html>
